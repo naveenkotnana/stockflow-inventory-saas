@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>StockFlow - Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body data-page="dashboard">
+<div class="layout">
+    <aside class="sidebar">
+        <div class="logo">StockFlow</div>
+        <nav>
+            <a href="/dashboard" class="nav-link active">Dashboard</a>
+            <a href="/products-page" class="nav-link">Products</a>
+            <a href="/settings-page" class="nav-link">Settings</a>
+        </nav>
+        <button id="logout-btn" class="btn secondary-btn full-width">Logout</button>
+    </aside>
+    <main class="content">
+        <header class="page-header">
+            <h1>Dashboard</h1>
+        </header>
+
+        <section class="cards">
+            <div class="card">
+                <h3>Total Products</h3>
+                <p id="total-products" class="card-value">0</p>
+            </div>
+            <div class="card">
+                <h3>Total Inventory Units</h3>
+                <p id="total-units" class="card-value">0</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-header">
+                <h2>Low Stock Products</h2>
+            </div>
+            <div class="table-wrapper">
+                <table class="table" id="low-stock-table">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>SKU</th>
+                        <th>Quantity</th>
+                        <th>Threshold</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <!-- Populated by JS -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <p id="dashboard-error" class="error-text"></p>
+    </main>
+</div>
+<script src="/static/app.js"></script>
+</body>
+</html>

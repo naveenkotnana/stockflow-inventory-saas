@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>StockFlow - Products</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body data-page="products">
+<div class="layout">
+    <aside class="sidebar">
+        <div class="logo">StockFlow</div>
+        <nav>
+            <a href="/dashboard" class="nav-link">Dashboard</a>
+            <a href="/products-page" class="nav-link active">Products</a>
+            <a href="/settings-page" class="nav-link">Settings</a>
+        </nav>
+        <button id="logout-btn" class="btn secondary-btn full-width">Logout</button>
+    </aside>
+    <main class="content">
+        <header class="page-header">
+            <h1>Products</h1>
+            <a href="/products/new" class="btn primary-btn">New Product</a>
+        </header>
+
+        <section class="section">
+            <div class="table-wrapper">
+                <table class="table" id="products-table">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>SKU</th>
+                        <th>Quantity</th>
+                        <th>Selling Price</th>
+                        <th>Low Stock</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <!-- JS -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <p id="products-error" class="error-text"></p>
+    </main>
+</div>
+<script src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>StockFlow - Settings</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body data-page="settings">
+<div class="layout">
+    <aside class="sidebar">
+        <div class="logo">StockFlow</div>
+        <nav>
+            <a href="/dashboard" class="nav-link">Dashboard</a>
+            <a href="/products-page" class="nav-link">Products</a>
+            <a href="/settings-page" class="nav-link active">Settings</a>
+        </nav>
+        <button id="logout-btn" class="btn secondary-btn full-width">Logout</button>
+    </aside>
+    <main class="content">
+        <header class="page-header">
+            <h1>Settings</h1>
+        </header>
+
+        <section class="section narrow">
+            <form id="settings-form">
+                <div class="form-group">
+                    <label for="default-threshold">Default Low Stock Threshold</label>
+                    <input id="default-threshold" type="number" min="1" required>
+                    <small class="hint">Used when a product has no custom low stock threshold.</small>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn primary-btn">Save Settings</button>
+                </div>
+                <p id="settings-error" class="error-text"></p>
+            </form>
+        </section>
+    </main>
+</div>
+<script src="/static/app.js"></script>
+</body>
+</html>
